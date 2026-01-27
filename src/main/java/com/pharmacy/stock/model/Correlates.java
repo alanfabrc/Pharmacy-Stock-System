@@ -33,4 +33,63 @@ public class Correlates {
     @Column(name = "correlate_type", nullable = false)
     @Enumerated(EnumType.STRING)
     private CorrelateTypesEnum correlatesType;
+
+    public Correlates() {
+    }
+
+    public Correlates(String name, String code, Integer quantity, LocalDate validity, CorrelateTypesEnum correlatesType) {
+        this.name = name;
+        this.code = code;
+        this.quantity = quantity;
+        this.validity = validity;
+        this.correlatesType = correlatesType;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public LocalDate getValidity() {
+        return validity;
+    }
+
+    public void setValidity(LocalDate validity) {
+        this.validity = validity;
+    }
+
+    public CorrelateTypesEnum getCorrelatesType() {
+        return correlatesType;
+    }
+
+    public void setCorrelatesType(CorrelateTypesEnum correlatesType) {
+        this.correlatesType = correlatesType;
+    }
 }

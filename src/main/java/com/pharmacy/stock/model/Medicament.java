@@ -28,7 +28,7 @@ public class Medicament {
     @JsonFormat(pattern = ("dd/MM/yyyy"))
     private LocalDate validity;
 
-    @Column(name = "type", nullable = false)
+    @Column(name = "medicament_type", nullable = false)
     @Enumerated(EnumType.STRING)
     private MedicamentTypesEnum type;
 
